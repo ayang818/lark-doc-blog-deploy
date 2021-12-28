@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  fe:
+    image: lard_doc_blog_fe:1.0
+    container_name: open_lark_doc_blog_fe_runner
+    restart: always
+    ports: 
+      - "0.0.0.0:80:3000"
+  
+  be:
+    image: lard_doc_blog_py:1.0
+    container_name: open_lark_doc_blog_be
+    restart: always
+    ports:
+      - "0.0.0.0:5000:80"
